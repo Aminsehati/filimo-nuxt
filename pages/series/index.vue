@@ -1,11 +1,22 @@
 <template>
   <div class="serial-page pt-20">
-    <div class="container-sm">
-      <div class="series-updated mb-30">
+    <div class="series-updated mb-30">
+      <div class="container-sm">
         <div class="title mb-25">
           <h2>سریال های به روزشده</h2>
         </div>
-        <div class="grid grid-cols-8 gap-x-10 gap-y-30">
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-8
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
           <CardMovie
             v-for="item in seriesUpdated"
             :key="item.id"
@@ -13,11 +24,24 @@
           />
         </div>
       </div>
-      <div class="series-2021 mb-30">
+    </div>
+    <div class="series-2021 mb-30">
+      <div class="container-sm">
         <div class="title mb-25">
-          <h2>سریال های به روزشده</h2>
+          <h2>سریال های 2021</h2>
         </div>
-        <div class="grid grid-cols-8 gap-x-10 gap-y-30">
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-5
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
           <CardMovie
             v-for="item in seriesUpdated"
             :key="item.id"
@@ -25,11 +49,24 @@
           />
         </div>
       </div>
-      <div class="series-irainan mb-20">
+    </div>
+    <div class="series-irainan my-30">
+      <div class="container-sm">
         <div class="title mb-25">
           <h2>سریال ایرانی</h2>
         </div>
-        <div class="grid grid-cols-8 gap-x-10 gap-y-30">
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-8
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
           <CardMovie
             v-for="item in seriesUpdated"
             :key="item.id"
@@ -37,7 +74,83 @@
           />
         </div>
       </div>
-      <CoverMovie />
+    </div>
+    <CoverMovie class="mb-30" />
+    <div class="series-anime mb-30">
+      <div class="container-sm">
+        <div class="title mb-25">
+          <h2>سریال انیمه</h2>
+        </div>
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-8
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
+          <CardMovie
+            v-for="item in seriesUpdated"
+            :key="item.id"
+            :movieInfo="item"
+          />
+        </div>
+      </div>
+    </div>
+    <CoverMovie class="mb-30" />
+    <div class="series-2020 mb-30">
+      <div class="container-sm">
+        <div class="title mb-25">
+          <h2>سریال 2020</h2>
+        </div>
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-8
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
+          <CardMovie
+            v-for="item in seriesUpdated"
+            :key="item.id"
+            :movieInfo="item"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="series-science-fiction">
+      <div class="container-sm">
+        <div class="title mb-25">
+          <h2>سریال علمی و تخیلی</h2>
+        </div>
+        <div
+          class="
+            grid
+            gap-x-10 gap-y-30
+            xl:grid-cols-8
+            lg:grid-cols-7
+            md:grid-cols-6
+            sm:grid-cols-5
+            xs:grid-cols-3
+            grid-cols-2
+          "
+        >
+          <CardMovie
+            v-for="item in seriesUpdated"
+            :key="item.id"
+            :movieInfo="item"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>

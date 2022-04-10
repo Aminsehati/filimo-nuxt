@@ -2,6 +2,7 @@
     {
         id: 1,
         name: 'فیلم',
+        path:"/movies",
         submenus: [
             {
                 id: 11,
@@ -73,6 +74,7 @@
     {
         id: 5622,
         name: 'سریال',
+        path:"/series",
         submenus: [
             {
                 id: 31,
